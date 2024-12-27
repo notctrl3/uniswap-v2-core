@@ -30,8 +30,8 @@ contract UniswapV2Factory is IUniswapV2Factory {
         // Create2 Address Calculation Formula : hash("0xFF", deployer's address , salt, initcode)
         // Create2 in yul, create2(value, offset, size, salt) --> Make It Predictable !!
         //  -value  : Amount of ETH to send (in wei)
-        //  -offset : Memory offset where contract bytecode starts, we all konw the memory layout of dynamically sized arrays that first 32 bytes
-        //            is the length of array
+        //  -offset : Memory offset where contract bytecode starts, we all know the memory layout of dynamically sized arrays - the first 32 bytes
+        //            store the length of array
         //  -size : Size of the contract bytecode
         //  -salt : The salt value for deterministic address creation
         assembly {
