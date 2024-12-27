@@ -13,7 +13,7 @@ contract UniswapV2ERC20 is IUniswapV2ERC20 {
     mapping(address => uint) public balanceOf;
     mapping(address => mapping(address => uint)) public allowance;
 
-    // Unique to the contract and chain to prevent replay attacks from other domains
+    // Unique to the contract and chain to prevent replay attacks from other domains Using DOMAIN_SEPARATOR
     // A common choice for DOMAIN_SEPARATOR is:
     // DOMAIN_SEPARATOR = keccak256(
     // abi.encode(
